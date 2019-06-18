@@ -1,0 +1,10 @@
+{
+	"actions": [
+		{
+			"say": "Hello Master, this is Jarvis, your virtual assistant... Would you like to know today's weather"
+		},
+		{
+			"listen": true
+		}
+	]
+}
