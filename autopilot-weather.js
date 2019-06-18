@@ -4,7 +4,8 @@ const date = require('date-and-time');
 exports.handler = function(context, event, callback) {
 //    const body = event.Body ? event.Body.toLowerCase(): null ;
 //	let twiml = new Twilio.twiml.MessagingResponse();
-	const Body = event.Field_Area_Value;
+//	const Body = event.Field_Area_Value;
+	const Body = event.CurrentInput; //the eventName seems to have change according to debugger. 
 	console.log(Body);
 	//obtain current UTC time with +GMT8 offset and shorten into a single variable with data.format and offset
     const now = date.format(date.addHours(new Date(), +8), 'YYYY-MM-DDTHH:mm:ss');  
