@@ -3,7 +3,7 @@ Twilio AutoPilot NLP for SG Weather Forecast
 This is an Add-on to the SG Weather Forecast Application (https://github.com/maxng07/sg-WhatsApp-Weather-DirectAPI), adding Natural Language Processing using Twilio AutoPilot (TA). With TA, this will front all communication channel requests, TA will have a logic to prompt user with questions and then send the appropriate request to backend application function to extract the weather forecast data. The same Weather Forecast function logic is used with some minor changes to the code.
 
  Communication Channels ----------------- Twilio AutoPilot ------------- Weather App ------------ NEA API GW
-(Voice/WhatsApp/SMS/Google Assisant)         (Jarvis)                    (Serverless)
+(Voice/WhatsApp/SMS/Google Assisant)							  (Jarvis)                    (Serverless)
 
 
 The Twilio AutoPilot profile is codename JARVIS and the config is in config.json. It is broken down into several tasks. You will need a Twilio Account to import the config using TA-Autopilot CLI.
