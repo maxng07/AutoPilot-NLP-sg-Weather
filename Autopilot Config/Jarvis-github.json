@@ -1,0 +1,432 @@
+{
+    "friendlyName" : "Jarvis",
+    "logQueries" : true,
+    "uniqueName" : "Jarvis",
+    "defaults" : {
+        "defaults" : {
+            "assistant_initiation" : "task://hello",
+            "fallback" : "task://having-trouble",
+            "collect" : {
+                "validate_on_failure" : "task://having-trouble"
+            }
+        }
+    },
+    "styleSheet" : {
+        "style_sheet" : {
+            "collect" : {
+                "validate" : {
+                    "on_failure" : {
+                        "repeat_question" : false,
+                        "messages" : [
+                            {
+                                "say" : "I didn't get that. What did you say?"
+                            },
+                            {
+                                "say" : "I still didn't catch that. Please repeat."
+                            },
+                            {
+                                "say" : "Let's try one last time. Say it again please."
+                            }
+                        ]
+                    },
+                    "on_success" : { "say" : "" },
+                    "max_attempts" : 2
+                }
+            },
+            "voice" : {
+                "say_voice" : "Polly.Brian"
+            }
+        }
+    },
+    "fieldTypes" : [
+        {
+            "uniqueName" : "Area",
+            "values" : [
+                {
+                    "language" : "en-US",
+                    "value" : "Ang Mo Kio",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Bedok",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Bishan",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Boon Lay",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Bukit Batok",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Bukit Merah",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Bukit Panjang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Bukit Timah",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Central Water Catchment",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Changi",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Choa Chu Kang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Clementi",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "City",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Geylang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Hougang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Jalan Bahar",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Jurong East",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Jurong Island",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Jurong West",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Kallang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Lim Chu Kang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Mandai",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Marine Parade",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Novena",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Pasir Ris",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Paya Lebar",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Pioneer",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Pulau Tekong",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Pulau Ubin",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Punggol",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Queenstown",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Seletar",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Sembawang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Sengkang",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Sentosa",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Serangoon",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Southern Islands",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Sungei Kadut",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Tampines",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Tanglin",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Tengah",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Toa Payoh",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Tuas",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Western Islands",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Western Water Catchment",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Woodlands",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "Yishun",
+                    "synonymOf" : null
+                },
+                {
+                    "language" : "en-US",
+                    "value" : "All",
+                    "synonymOf" : null
+                }
+            ]
+        }
+    ],
+    "tasks" : [
+        {
+            "uniqueName" : "having-trouble",
+            "actions" : {
+                "actions" : [
+                    {
+                        "say" : "I am having problems understanding. Goodbye"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : []
+        },
+        {
+            "uniqueName" : "Weather",
+            "actions" : {
+                "actions" : [
+                    {
+                        "collect" : {
+                            "on_complete" : {
+                                "redirect" : "https://xxxxxxx/autopilot-weather"
+                            },
+                            "name" : "ask_area",
+                            "questions" : [
+                                {
+                                    "type" : "Area",
+                                    "question" : "Which area do you want the Weather forecast? ",
+                                    "name" : "Area"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "fields" : [
+                {
+                    "uniqueName" : "Area",
+                    "fieldType" : "Area"
+                }
+            ],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "clementi"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Yes, please."
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Yes please"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Clementi"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Can you tell the weather forecast in {Area}"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "{Area}"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "weather"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "What is the weather"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Yes"
+                }
+            ]
+        },
+        {
+            "uniqueName" : "End_conversation",
+            "actions" : {
+                "actions" : [
+                    {
+                        "say" : "Sorry Master, I cannot help you. Have a nice day"
+                    }
+                ]
+            },
+            "fields" : [],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Goodbye"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "bye"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "nah"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "What else"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "I'm not interested"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "No"
+                }
+            ]
+        },
+        {
+            "uniqueName" : "hello",
+            "actions" : {
+                "actions" : [
+                    {
+                        "say" : "Hello Master, this is Jarvis, your virtual assistant... Would you like to know today's weather"
+                    },
+                    { "listen" : true }
+                ]
+            },
+            "fields" : [],
+            "samples" : [
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Jarvis"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Hi"
+                },
+                {
+                    "language" : "en-US",
+                    "taggedText" : "Hello"
+                }
+            ]
+        }
+    ],
+    "modelBuild" : { "uniqueName" : "v0.8" }
+}
