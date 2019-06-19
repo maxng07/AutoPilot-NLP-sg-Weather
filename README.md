@@ -14,7 +14,7 @@ These are the tasks
 4. End-conversation - to close the conversation when user respond negative to having weather forecast
 
 The backend weather forecast autopilot-weather.js logic has these minor modications
-1. Change input field value from event.Body to event.Field_Area_Value, this contains the field value of "Area" or "All" for use to query weather forecast retrieve from NEA website.
+1. Change input field value from event.Body to event.CurrentInput this contains the field value of "Area" or "All" for use to query weather forecast retrieve from NEA website.
 const Body = event.Field_Area_Value is now used
 2. Variable key is now change to converting "Body" to lowercase for matching the array fetch from NEA.
 var key = Body.toLowerCase();
