@@ -15,6 +15,10 @@ These are the tasks
 
 The backend weather forecast autopilot-weather.js logic running on Twilio Function have these minor modications
 1. Change input field value from event.Body to event.CurrentInput this contains the field value of "Area" or "All" for use to query weather forecast retrieve from NEA website. const Body = event.CurrentInput is now used
+If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via
+(a) event.CurrentInput
+(b) event.Field_{Name of your field in TA}_Value
+(c) Array by the name of Memory
 
 2. Variable key is now change to converting "Body" to lowercase for matching the array fetch from NEA.
 var key = Body.toLowerCase();
