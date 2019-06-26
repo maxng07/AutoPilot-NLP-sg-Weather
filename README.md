@@ -10,7 +10,7 @@ This is an Add-on to the SG Weather Forecast Application (https://github.com/max
 
 The Twilio AutoPilot profile is codename JARVIS and the full backup config is in folder "AutoPilot Config". It is broken down into several tasks. The config of each task is in main folder ending with .json. You will need a Twilio Account and TA-Autopilot CLI to import the full backup config. Otherwise you can create the config for task manually with the individual task config. <br>
 
-These are the tasks at high-level <br>
+These are the tasks at high-level 
 1. Hello /Hello.json - Greets the user coming from various communication channels (Google Assistant, WhatsApp, SMS and Voice)
 2. Weather /Weather.json - Prompts the User for Weather forecast with questions to construct a query to backend with error handling
 3. Having-trouble - to close the conversation when an error is encounter. Specifically meant for Voice channel when NLP could not interpret.
@@ -18,10 +18,10 @@ These are the tasks at high-level <br>
 
 The backend weather forecast autopilot-weather.js logic running on Twilio Function have these minor modications to work with TA.
 1. Change input field value from event.Body to event.CurrentInput this contains the field value of "Area" or "All" for use to query weather forecast retrieve from NEA website. const Body = event.CurrentInput is now used
-If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via
-(a) event.CurrentInput
-(b) event.Field_{Name of your field in TA}_Value
-(c) Array by the name of Memory - extract the data from the array.
+If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via 
+(a) event.CurrentInput <br>
+(b) event.Field_{Name of your field in TA}_Value <br>
+(c) Array by the name of Memory - extract the data from the array. <br>
 
 2. Variable key is now change to converting "Body" to lowercase for matching the array fetch from NEA.
 var key = Body.toLowerCase();
