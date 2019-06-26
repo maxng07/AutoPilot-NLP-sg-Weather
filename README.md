@@ -18,7 +18,7 @@ These are the tasks at high-level
 
 The backend weather forecast autopilot-weather.js logic running on Twilio Function have these minor modications to work with TA.
 1. Change input field value from event.Body to event.CurrentInput this contains the field value of "Area" or "All" for use to query weather forecast retrieve from NEA website. const Body = event.CurrentInput is now used
-If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via 
+If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via <br>
 (a) event.CurrentInput <br>
 (b) event.Field_{Name of your field in TA}_Value <br>
 (c) Array by the name of Memory - extract the data from the array. <br>
