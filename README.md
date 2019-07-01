@@ -30,3 +30,5 @@ var key = Body.toLowerCase();
 
 3. Added a new variable "message", this is use to construct the response back for TA
 
+This has been tested with Voice (Webrtc), WhatsApp and Google Assistant integrating with TA. 
+
