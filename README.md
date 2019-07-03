@@ -19,11 +19,13 @@ These are the tasks at high-level
 4. End-conversation - to close the conversation when user respond negative to having weather forecast
 
 The backend weather forecast autopilot-weather.js logic running on Twilio Function have these minor modications to work with TA.
-1. Change input field value from event.Body to event.CurrentInput this contains the field value of "Area" or "All" for use to query weather forecast retrieve from NEA website. const Body = event.CurrentInput is now used
+1. Change input field value from event.Body to event.CurrentInput. CurrentInput is a paramm send out from TA in a regular HTTPS POST message. CurrentInput contains user's input either from speech or text. Although the NLP has the "Weather" task with questions to prompt user for Town-Area, it is possible a user will either speak or type a sentence, example "I like to know the weather in Novena". CurrentInput param will contain this. The field/keyword value is contained within an array that TA also send in a JSON array format by the name of Memory. Extracting the field/keyword value from Memory array would be more accurate for matching. 
+<br>
+const Body = event.CurrentInput is now used or from the memory table 
 If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via <br>
 (a) event.CurrentInput <br>
 (b) event.Field_{Name of your field in TA}_Value <br>
-(c) Array by the name of Memory - extract the data from the array. <br>
+(c) Array by the name of Memory - extract the data from the array. The exact key memory.twilio.collected_data.ask_area.answers.Area.answer <br>
 
 2. Variable key is now change to converting "Body" to lowercase for matching the array fetch from NEA.
 var key = Body.toLowerCase();
