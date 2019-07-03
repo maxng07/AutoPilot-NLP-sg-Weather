@@ -24,7 +24,7 @@ The backend weather forecast autopilot-weather.js logic running on Twilio Functi
 const Body = event.CurrentInput is now used or from the memory table 
 If you use Twilio Serverless/Function for your backend, Twilio AutoPilot will pass field variable in parameter as part of HTTPS POST, you can extract this either via <br>
 (a) event.CurrentInput <br>
-(b) event.Field_{Name of your field in TA}_Value <br>
+(b) event.Field_{Name of your field in TA}_Value (there seems to be an odd bug that this param is not present. Have send a note to Twilio <br>
 (c) Array by the name of Memory - extract the data from the array. The exact key memory.twilio.collected_data.ask_area.answers.Area.answer <br>
 
 2. Variable key is now change to converting "Body" to lowercase for matching the array fetch from NEA.
