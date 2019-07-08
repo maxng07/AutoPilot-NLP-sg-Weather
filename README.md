@@ -2,7 +2,7 @@
 Natural Language Processing with capabilities to support incoming Voice, Google Assistant, WhatsApp, SMS with a Chatbot responder for Singapore Weather Forecast. The weather data are extracted from NEA/Gov Tech. <br>
 
 Twilio AutoPilot NLP for SG Weather Forecast. <br>
-Twilio AutoPilot is actually Amazon Lex with the same feature sets and pricing.
+Twilio AutoPilot and Amazon Lex looks very similar with almost the same feature sets and pricing, it is not known if they are similar, but Twilio AutoPilot is much simpler to configure.
 
 This is an Add-on to the SG Weather Forecast Application (https://github.com/maxng07/sg-WhatsApp-Weather-DirectAPI), adding Natural Language Processing using Twilio AutoPilot (TA). With TA, this will front all communication channel requests (be it WhatsApp, Google Assistant or Voice on either SIP or WebRTC), TA will have a logic to prompt user with questions and then send the appropriate request to the backend application running on Twilio Serverless function to extract the weather forecast data. The same Weather Forecast function logic in the original Weather app is used with some minor changes to the code to get it working with TA. More details below.
 
