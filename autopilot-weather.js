@@ -41,8 +41,9 @@ for (var i = 0; i < jsonobj1.forecasts.length; i++){
      var obj =jsonobj1.forecasts[i] ;  
     //Check for a special key 
      if (key === "all") {
-    // Print out the whole JS array 
-        keyval = JSON.stringify(jsonobj1.forecasts) ;
+     // Currently Twilio Messaging Platform has a length limit of 1600 characters. The raw json array would exceed this length. Parse the array to obtain only the "area" and "forecast" field 
+        keyval += jsonobj1.forecasts[i].area + " : " + jsonobj1.forecasts[i].forecast + "\n" ;
+	console.log(keyval);
         msg = 2 ;
         break ;
     }
